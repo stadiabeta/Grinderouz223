@@ -7,9 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             
             <div class="hidden md:flex items-center gap-8 font-bold text-white uppercase text-sm tracking-widest">
-                <a href="#home" class="hover:text-yellow-500 transition py-1">Home</a>
+                <a href="index.html" class="hover:text-yellow-500 transition py-1">Home</a>
                 <a href="#stats" class="hover:text-yellow-500 transition py-1">Stats</a>
                 <a href="#rules" class="hover:text-yellow-500 transition py-1">Rules</a>
+                <a href="media.html" class="hover:text-yellow-500 transition py-1">Media</a>
                 <a href="sc-store.html" class="hover:text-yellow-500 transition py-1">Store</a>
                 <a href="https://id.supercell.com/en/clashofclans/" class="hover:text-yellow-500 transition py-1">SCID</a>
                 <a href="#join" class="hover:text-yellow-500 transition text-yellow-600 border-2 border-[black] hover:border-yellow-500 px-4 py-1 rounded-lg">Join Us</a>
@@ -25,9 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
             </button>
 
             <div id="mobile-overlay" class="fixed inset-0 bg-[#111] translate-x-full transition-transform duration-300 ease-in-out z-[55] flex flex-col items-center justify-center gap-8 md:hidden">
-                <a href="#home" class="mobile-link text-3xl font-black text-white uppercase hover:text-yellow-500">Home</a>
+                <a href="index.html" class="mobile-link text-3xl font-black text-white uppercase hover:text-yellow-500">Home</a>
                 <a href="#stats" class="mobile-link text-3xl font-black text-white uppercase hover:text-yellow-500">Stats</a>
                 <a href="#rules" class="mobile-link text-3xl font-black text-white uppercase hover:text-yellow-500">Rules</a>
+                <a href="media.html" class="mobile-link text-3xl font-black text-white uppercase hover:text-yellow-500">Clan Media</a>
                 <a href="https://id.supercell.com/en/clashofclans/" class="mobile-link text-3xl font-black text-white uppercase hover:text-yellow-500">SCID</a>
                 <a href="sc-store.html" class="mobile-link text-3xl font-black text-white uppercase hover:text-yellow-500">SC Store</a>
                 <a href="#join" class="mobile-link text-3xl font-black text-yellow-500 uppercase border-2 border-[#111] hover:border-yellow-500 px-8 py-3 rounded-2xl">Join Us</a>
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     const footerHTML = `
-        <footer class="bg-[#222] border-t border-slate-700 py-12 px-6 text-center">
+        <footer class="bg-[#111] border-t border-slate-700 py-12 px-6 text-center">
             <div class="max-w-6xl mx-auto">
                 <div class="flex items-center justify-center gap-2 mb-6">
                     <img style="width:30px;" src="assets/favicon.png" onerror="this.style.display='none'">

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Media Gallery | Grinderouz223</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --coc-gold: #f3c31b;
+            --coc-gold-dark: #d4a017;
+            --coc-stone: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--coc-stone);
+            color: #2d3748;
+        }
+
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+        }
+
+        .media-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .media-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .category-pill {
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .category-pill.active {
+            background-color: var(--coc-gold);
+            color: black;
+            border-color: var(--coc-gold);
+        }
+
+        /* Custom Scrollbar for the gallery */
+        ::-webkit-scrollbar { width: 12px; }
+        ::-webkit-scrollbar-track { background: #111; }
+        ::-webkit-scrollbar-thumb { 
+            background: var(--coc-gold); 
+            border-radius: 6px;
+            border: 3px solid #111;
+        }
+
+        #lightbox {
+            display: none;
+            backdrop-filter: blur(8px);
+        }
+    </style>
+</head>
+<body class="hero-pattern min-h-screen">
+
+    <!-- Navbar container populated by navbar.js -->
+    <div id="navbar-container"></div>
+
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+        <header class="text-center mb-16">
+            <h1 class="text-5xl font-black text-slate-900 mb-4 uppercase tracking-tight">Clan Media</h1>
+        </header>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap justify-center gap-3 mb-12" id="category-filters">
+            <button class="category-pill active border-2 border-slate-200 px-6 py-2 rounded-full font-bold uppercase text-xs tracking-widest" data-category="all">All Media</button>
+            <button class="category-pill border-2 border-slate-200 px-6 py-2 rounded-full font-bold uppercase text-xs tracking-widest" data-category="base">Bases</button>
+        </div>
+
+        <!-- Media Grid -->
+        <div id="media-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Items injected by medialist.js -->
+        </div>
+
+        <!-- Empty State (Hidden by default) -->
+        <div id="empty-state" class="hidden text-center py-20">
+            <p class="text-slate-400 font-bold uppercase tracking-widest text-xl">No media found in this category.</p>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4">
+        <button id="close-lightbox" class="absolute top-6 right-6 text-white hover:text-yellow-500 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <div id="lightbox-content" class="max-w-5xl w-full flex flex-col items-center">
+            <!-- Dynamic content -->
+        </div>
+    </div>
+
+    <!-- Footer container populated by navbar.js -->
+    <div id="footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="navbar.js"></script>
+    <script src="medialist.js"></script>
+</body>
+</html>
