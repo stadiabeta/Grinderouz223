@@ -24,9 +24,12 @@ class ZoomGallery {
         this.content.style.width = '100%';
         this.content.style.height = '100%';
         this.content.style.display = 'flex';
+        this.content.style.flexDirection = 'column';
         this.content.style.alignItems = 'center';
         this.content.style.justifyContent = 'center';
         this.content.style.zIndex = '100';
+        
+        this.content.style.touchAction = 'none'; 
 
         const style = document.createElement('style');
         style.textContent = `
@@ -37,13 +40,17 @@ class ZoomGallery {
                 max-width: 90%;
                 max-height: 85vh;
                 object-fit: contain;
+                /* Hardware acceleration fixes to prevent black flickering */
+                will-change: transform; 
+                backface-visibility: hidden;
+                transform: translate3d(0, 0, 0); 
             }
             
             #close-lightbox {
                 position: fixed !important;
                 top: 20px !important;
                 right: 20px !important;
-                z-index: 2100 !important; /* Higher than everything else */
+                z-index: 2100 !important;
                 background: rgba(0, 0, 0, 0.6);
                 border: 2px solid #f3c31b;
                 border-radius: 50%;
@@ -96,7 +103,7 @@ class ZoomGallery {
             this.content.style.cursor = 'grab';
         };
 
-        this.content.onwheel = (e) => {
+        this.content.addEventListener('wheel', (e) => {
             e.preventDefault();
             const img = this.content.querySelector('img');
             if (!img) return;
@@ -115,10 +122,11 @@ class ZoomGallery {
             this.pointY = e.clientY - ys * this.scale;
 
             this.updateTransform(img);
-        };
+        }, { passive: false });
 
         let lastDist = 0;
-        this.content.ontouchstart = (e) => {
+        
+        this.content.addEventListener('touchstart', (e) => {
             if (e.touches.length === 1) {
                 this.panning = true;
                 this.start = { x: e.touches[0].clientX - this.pointX, y: e.touches[0].clientY - this.pointY };
@@ -128,11 +136,15 @@ class ZoomGallery {
                     e.touches[0].pageY - e.touches[1].pageY
                 );
             }
-        };
+        }, { passive: false });
 
-        this.content.ontouchmove = (e) => {
+        this.content.addEventListener('touchmove', (e) => {
             const img = this.content.querySelector('img');
             if (!img) return;
+
+            if (e.cancelable) {
+                e.preventDefault(); 
+            }
 
             if (e.touches.length === 1 && this.panning) {
                 if (this.scale <= 1) return;
@@ -140,7 +152,6 @@ class ZoomGallery {
                 this.pointY = (e.touches[0].clientY - this.start.y);
                 this.updateTransform(img);
             } else if (e.touches.length === 2) {
-                e.preventDefault();
                 const dist = Math.hypot(
                     e.touches[0].pageX - e.touches[1].pageX,
                     e.touches[0].pageY - e.touches[1].pageY
@@ -150,11 +161,11 @@ class ZoomGallery {
                 lastDist = dist;
                 this.updateTransform(img);
             }
-        };
+        }, { passive: false });
 
-        this.content.ontouchend = () => {
+        this.content.addEventListener('touchend', () => {
             this.panning = false;
-        };
+        });
     }
 
     reset() {
@@ -170,9 +181,9 @@ class ZoomGallery {
         if (this.scale <= 1) {
             this.pointX = 0;
             this.pointY = 0;
-            img.style.transform = `translate(0, 0) scale(1)`;
+            img.style.transform = `translate3d(0px, 0px, 0px) scale(1)`;
         } else {
-            img.style.transform = `translate(${this.pointX}px, ${this.pointY}px) scale(${this.scale})`;
+            img.style.transform = `translate3d(${this.pointX}px, ${this.pointY}px, 0px) scale(${this.scale})`;
         }
     }
 }

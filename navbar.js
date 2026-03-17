@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <nav class="navbar fixed w-full z-50 px-6 py-4 flex justify-between items-center bg-[#111] border-b-2 border-[#f3c31b]">
             <div class="flex items-center gap-2 relative z-[60]">
                 <img style="width:30px;" src="assets/favicon.png" onerror="this.src='https://raw.githubusercontent.com/Supercell/clash-of-clans-assets/master/icons/favicon.png'">
-                <span class="text-2xl font-black tracking-tight text-white uppercase">Grinderouz223</span>
+                <a href="index.html"><span class="text-2xl font-black tracking-tight text-white uppercase">Grinderouz223</span></a>
             </div>
             
             <div class="hidden md:flex items-center gap-8 font-bold text-white uppercase text-sm tracking-widest">
@@ -63,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="index.html#rules" class="hover:text-yellow-500 transition py-1">Rules</a>
                         <a href="index.html#stats" class="hover:text-yellow-500 transition py-1">Stats</a>
                         <a href="index.html#leadership" class="hover:text-yellow-500 transition py-1">Leaders</a>
+                        <a href="http://discord.gg/jEN9NNdA4v" class="hover:text-yellow-500 transition py-1">Discord</a>
                     </div>
                     </div>
 
@@ -93,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="index.html#stats" class="mobile-link text-xl font-bold text-white uppercase hover:text-yellow-500">Stats</a>
                 </div>
                 <a href="index.html#join" class="mobile-link text-2xl font-black text-yellow-500 uppercase border-2 border-yellow-500 px-8 py-3 rounded-2xl">Join Us</a>
+                <a href="https://discord.gg/jEN9NNdA4v" class="mobile-link text-2xl font-black text-blue-500 uppercase border-2 border-blue-500 px-8 py-3 rounded-2xl">Discord</a>
             </div>
         </nav>
     `;
@@ -109,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <a href="sc-store.html" class="text-slate-400 hover:text-yellow-500 font-bold uppercase text-xs">Supercell Store</a>
                     <a href="https://supercell.com/en/games/clashofclans/" class="text-slate-400 hover:text-yellow-500 font-bold uppercase text-xs">Clash Of Clans</a>
                     <a href="https://id.supercell.com/en/clashofclans/" class="text-slate-400 hover:text-yellow-500 font-bold uppercase text-xs">SCID</a>
+                    <a href="https://discord.gg/jEN9NNdA4v" class="text-slate-400 hover:text-blue-500 font-bold uppercase text-xs">DISCORD</a>
                 </div>
             </div>
         </footer>
