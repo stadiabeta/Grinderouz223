@@ -2,10 +2,10 @@ const mediaItems = [
     {
         id: 1,
         title: "Your Video here",
-        type: "video", // video or image
+        type: "video",
         category: "all",
         thumbnail: "#",
-        url: "#", // Use embed URLs for videos
+        url: "#", 
         description: ""
     },
     {
