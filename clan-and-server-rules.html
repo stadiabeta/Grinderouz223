@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clan and Server Rules | Grinderouz223</title>
+    <!-- Tailwind CSS for Navbar compatibility -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-text: #e2e8f0;
+            --secondary-text: #94a3b8;
+            --heading-color: #f3c31b; /* COC Gold */
+            --bg-color: #0f172a;      /* Dark Navy */
+            --card-bg: #1e293b;       /* Lighter Navy */
+            --accent-color: #f3c31b;
+            --coc-gold: #f3c31b;
+            --coc-gold-dark: #d4a017;
+            --coc-blue: #4a90e2;
+            --coc-stone: #0f172a; 
+            --coc-stone-dark: #020617; 
+            --coc-border: #334155; 
+        }
+
+        body {
+            font-family: "Arial", "Helvetica", sans-serif;
+            line-height: 1.6;
+            color: var(--primary-text);
+            background-color: var(--bg-color);
+            background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+            margin: 0;
+            padding: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 16px;
+            height: 16px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--coc-stone-dark);
+            border-left: 2px solid var(--coc-stone);
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, var(--coc-gold) 0%, var(--coc-gold-dark) 100%);
+            border: 3px solid var(--coc-stone-dark);
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.8);
+            cursor: pointer;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #fff275 0%, var(--coc-gold) 100%);
+            box-shadow: 0 0 10px var(--coc-gold);
+        }
+
+        ::-webkit-scrollbar-corner {
+            background: var(--coc-stone-dark);
+        }
+
+        * {
+            scrollbar-width: auto;
+            scrollbar-color: var(--coc-gold-dark) var(--coc-stone-dark);
+        }
+
+        /* Spacing for fixed navbar */
+        .content-wrapper {
+            padding: 120px 20px 60px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            max-width: 850px;
+            width: 100%;
+            padding: 50px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+
+        h1 {
+            color: var(--heading-color);
+            font-size: 22pt;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 12px;
+            margin-top: 50px;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
+        }
+
+        h1:first-of-type {
+            margin-top: 0;
+        }
+
+        h2 {
+            font-size: 14pt;
+            color: #fff;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "◈";
+            color: var(--accent-color);
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        p {
+            margin: 12px 0;
+            font-size: 11pt;
+            color: var(--primary-text);
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding-left: 10px;
+        }
+
+        .rule-label {
+            font-weight: 800;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-size: 0.95em;
+            margin-right: 5px;
+        }
+
+        .underline {
+            text-decoration: underline;
+            text-decoration-color: var(--accent-color);
+        }
+
+        .spacer {
+            height: 40px;
+        }
+
+        .footer-note {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 10pt;
+            color: var(--secondary-text);
+            font-style: italic;
+            border-top: 1px solid #334155;
+            padding-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+            .content-wrapper {
+                padding-top: 100px;
+            }
+            h1 {
+                font-size: 18pt;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Container for the dynamic navbar -->
+    <div id="navbar-container"></div>
+
+    <main class="content-wrapper">
+        <div class="container" id="rules">
+            <!-- IN-GAME CLAN RULES -->
+            <h1>🛡️ IN-GAME CLAN RULES</h1>
+
+            <section>
+                <h2>1. Activity & Participation</h2>
+                <p><span class="rule-label">The Inactivity Limit:</span> Players inactive for 10 consecutive days without notifying leadership will be kicked.</p>
+                <p><span class="rule-label">Presence:</span> Popping into the chat occasionally shows you're alive and engaged. Even if just in the Discord! We aren't too strict on this.</p>
+                <p><span class="rule-label">Upgrading:</span> Keep your builders busy! Rushed bases (unless donation accounts) may be excluded from wars.</p>
+                <p><span class="rule-label">TH7 REQUIRED:</span> Town Hall 7 is required to Join no brand new inactive players.</p>
+            </section>
+
+            <section>
+                <h2>2. Donations & Requests</h2>
+                <p><span class="rule-label">Read Before You Donate:</span> Always donate exactly what is requested. No "surprise" Wall Breakers when Dragons are asked for.</p>
+                <p><span class="rule-label">Ratios:</span> No strict ratios, but heavy leeching without giving back will result in a warning.</p>
+                <p><span class="rule-label">War Donations:</span> Strictly <span class="underline">MAX level troops only</span> for War CCs and War attacks.</p>
+            </section>
+
+            <section>
+                <h2>3. Clan Wars & CWL</h2>
+                <p><span class="rule-label">Opting In/Out:</span> Keep your shield updated. Red if Heroes/Spells are upgrading; Green if ready.</p>
+                <p><span class="rule-label">Attack Usage:</span> Use both attacks regardless of the score. Missing attacks is a high offense.</p>
+                <p><span class="rule-label">Targeting:</span> Follow the war notes or attack your mirror for the first hit. Clean-up for the second.</p>
+                <p><span class="rule-label">No Heroes, No War:</span> Standard wars require Heroes to be up.</p>
+            </section>
+
+            <section>
+                <h2>4. Clan Games & Raids</h2>
+                <p><span class="rule-label">Clan Games:</span> Minimum 1000 points required. We always aim for the top tier.</p>
+                <p><span class="rule-label">Capital Raids:</span> Use all 5-6 attacks every weekend. Finish the district you start.</p>
+            </section>
+
+            <section>
+                <h2>5. Promotions</h2>
+                <p><span class="rule-label">Earned, Not Given:</span> Elder is based on consistency, donations, and war performance. Co-Leader is for trusted long-term staff.</p>
+            </section>
+
+            <div class="spacer"></div>
+
+            <!-- DISCORD SERVER RULES -->
+            <h1 id="discord-rules">💬 DISCORD SERVER RULES</h1>
+
+            <section>
+                <h2>1. Verification</h2>
+                <p><span class="rule-label">Restricted Access:</span> Unverified users cannot use bots or see core channels. Verify by being in the clan and requesting a role.</p>
+            </section>
+
+            <section>
+                <h2>2. Community Conduct</h2>
+                <p><span class="rule-label">Zero Tolerance:</span> No hate speech or toxicity. Banter is fine; harassment is an instant ban.</p>
+                <p><span class="rule-label">Keep it Clean:</span> No NSFW content, intense politics, or religious debates.</p>
+            </section>
+
+            <section>
+                <h2>3. Etiquette</h2>
+                <p><span class="rule-label">Stay on Topic:</span> Use specific channels (#base-designs, #bot-commands) for their intended purpose.</p>
+                <p><span class="rule-label">Bot Spam:</span> Keep interactions in #bot-commands only.</p>
+            </section>
+
+            <section>
+                <h2>4. Pinging</h2>
+                <p><span class="rule-label">@everyone:</span> Leadership only.</p>
+                <p><span class="rule-label">Pinging Staff:</span> Only for time-sensitive emergencies.</p>
+            </section>
+
+            <div class="footer-note">
+                Last Updated March 18, 2026 | 5:53PM
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="navbar.js"></script>
+</body>
+</html>
