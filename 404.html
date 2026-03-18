@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>404 - Not Found | Grinderouz223</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/favicon.png">    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --coc-gold: #f3c31b;
+            --coc-gold-dark: #d4a017;
+            --coc-stone: #0f172a; 
+            --coc-stone-dark: #020617; 
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--coc-stone-dark);
+            color: #f8fafc;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .coc-btn-gold {
+            background: linear-gradient(to bottom, #f3c31b, #d4a017);
+            box-shadow: 0 4px 0 #b0840a, inset 0 1px 2px rgba(255,255,255,0.4);
+            border: 1px solid #8c6a08;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            transition: all 0.2s;
+        }
+
+        .coc-btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 0 #b0840a, inset 0 1px 2px rgba(255,255,255,0.4);
+        }
+
+        .coc-btn-gold:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #b0840a;
+        }
+
+        .bg-pattern {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(circle at 2px 2px, #1e293b 1px, transparent 0);
+            background-size: 40px 40px;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        .glitch-text {
+            color: var(--coc-gold);
+            text-shadow: 3px 3px 0px rgba(0,0,0,1);
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+
+    <main class="text-center px-6">
+        <div class="mb-8 flex justify-center">
+            <div class="relative w-48 h-48 sm:w-64 sm:h-64 floating">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full drop-shadow-2xl">
+                    <path fill="#475569" d="M40,160 L160,160 L160,100 L100,40 L40,100 Z" />
+                    <path fill="#f3c31b" d="M90,70 L110,70 L110,90 L90,90 Z" />
+                    <rect x="85" y="120" width="30" height="40" fill="#1e293b" />
+                    <path fill="#020617" d="M140,140 L180,180 L130,190 Z" opacity="0.5" />
+                    <circle cx="50" cy="50" r="10" fill="#f3c31b" opacity="0.3" />
+                    <circle cx="150" cy="40" r="15" fill="#f3c31b" opacity="0.2" />
+                </svg>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-6xl sm:text-8xl font-black italic glitch-text opacity-90">404</span>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl font-extrabold mb-4 uppercase tracking-tighter">
+            Village Under Attack!
+        </h1>
+        <p class="text-slate-400 text-lg mb-8 max-w-md mx-auto">
+            The builders couldn't find the page you're looking for. It might have been destroyed in a clan war or moved to a new league.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="index.html" class="coc-btn-gold px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-lg">
+                Return to Home
+            </a>
+            <a href="https://discord.gg/jEN9NNdA4v" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-lg transition-colors border border-slate-600">
+                Contact Support
+            </a>
+        </div>
+
+        <div class="mt-12 text-slate-500 text-sm italic">
+            Error Code: BUILDING_NOT_CONSTRUCTED
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            document.querySelector('.bg-pattern').style.transform = `translate(${x * 10}px, ${y * 10}px)`;
+        });
+    </script>
+</body>
+</html>

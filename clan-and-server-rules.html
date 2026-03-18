@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Clan and Server Rules | Grinderouz223</title>
-    <!-- Tailwind CSS for Navbar compatibility -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root {
             --primary-text: #e2e8f0;
             --secondary-text: #94a3b8;
-            --heading-color: #f3c31b; /* COC Gold */
-            --bg-color: #0f172a;      /* Dark Navy */
-            --card-bg: #1e293b;       /* Lighter Navy */
+            --heading-color: #f3c31b;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;       
             --accent-color: #f3c31b;
             --coc-gold: #f3c31b;
             --coc-gold-dark: #d4a017;
@@ -65,7 +66,6 @@
             scrollbar-color: var(--coc-gold-dark) var(--coc-stone-dark);
         }
 
-        /* Spacing for fixed navbar */
         .content-wrapper {
             padding: 120px 20px 60px 20px;
             display: flex;
@@ -167,12 +167,10 @@
     </style>
 </head>
 <body>
-    <!-- Container for the dynamic navbar -->
     <div id="navbar-container"></div>
 
     <main class="content-wrapper">
         <div class="container" id="rules">
-            <!-- IN-GAME CLAN RULES -->
             <h1>🛡️ IN-GAME CLAN RULES</h1>
 
             <section>
@@ -211,7 +209,6 @@
 
             <div class="spacer"></div>
 
-            <!-- DISCORD SERVER RULES -->
             <h1 id="discord-rules">💬 DISCORD SERVER RULES</h1>
 
             <section>
