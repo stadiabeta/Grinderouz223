@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
             
             <div class="hidden md:flex items-center gap-8 font-bold text-white uppercase text-sm tracking-widest">
                 <a href="index.html" class="hover:text-yellow-500 transition py-1">Home</a>
-                <a href="media.html" class="hover:text-yellow-500 transition py-1">Media</a>
                 <a href="index.html#leadership" class="hover:text-yellow-400 transition">Leadership</a>
                 
                 <div class="relative dropdown group">
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                     </button>
                     <div class="dropdown-menu">
-                        <a href="sc-store.html">Supercell Store</a>
+                        <a href="https://store.supercell.com/clashofclans">Supercell Store</a>
                         <a href="https://id.supercell.com/en/clashofclans/" target="_blank">Supercell ID</a>
                     </div>
                 </div>
@@ -81,10 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             <div id="mobile-overlay" class="fixed inset-0 bg-[#111] translate-x-full transition-transform duration-300 ease-in-out z-[55] flex flex-col items-center justify-center gap-6 md:hidden">
                 <a href="index.html" class="mobile-link text-2xl font-black text-white uppercase hover:text-yellow-500">Home</a>
-                <a href="media.html" class="mobile-link text-2xl font-black text-white uppercase hover:text-yellow-500">Media</a>
                 <div class="flex flex-col items-center gap-2 border-y border-slate-800 py-4 w-full">
                     <span class="text-xs text-slate-500 uppercase tracking-widest font-bold">Supercell</span>
-                    <a href="sc-store.html" class="mobile-link text-xl font-bold text-white uppercase hover:text-yellow-500">Store</a>
+                    <a href="https://store.supercell.com/clashofclans" class="mobile-link text-xl font-bold text-white uppercase hover:text-yellow-500">Store</a>
                     <a href="https://id.supercell.com/en/clashofclans/" class="mobile-link text-xl font-bold text-white uppercase hover:text-yellow-500">SCID</a>
                 </div>
                 <div class="flex flex-col items-center gap-2 border-y border-slate-800 py-4 w-full">
@@ -108,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <p class="text-slate-400 text-sm">© 2026 Grinderouz223 Clan. Not affiliated with Supercell.</p>
                 <div class="mt-4 flex justify-center gap-6">
-                    <a href="sc-store.html" class="text-slate-400 hover:text-yellow-500 font-bold uppercase text-xs">Supercell Store</a>
+                    <a href="https://store.supercell.com/clashofclans" class="text-slate-400 hover:text-yellow-500 font-bold uppercase text-xs">Supercell Store</a>
                     <a href="https://supercell.com/en/games/clashofclans/" class="text-slate-400 hover:text-yellow-500 font-bold uppercase text-xs">Clash Of Clans</a>
                     <a href="https://id.supercell.com/en/clashofclans/" class="text-slate-400 hover:text-yellow-500 font-bold uppercase text-xs">SCID</a>
                     <a href="https://discord.gg/jEN9NNdA4v" class="text-slate-400 hover:text-blue-500 font-bold uppercase text-xs">DISCORD</a>
