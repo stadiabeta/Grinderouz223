@@ -112,7 +112,7 @@
         <div class="update-info-panel" id="updatePanel">
             <h4>Data Information</h4>
             <p>Last updated:</p>
-            <p class="timestamp">3/19/26</p>
+            <p class="timestamp">3/21/26</p>
         </div>
         <button class="update-trigger-btn" id="updateBtn" title="Site Info">
             <img src="assets/favicon.png" alt="!">
