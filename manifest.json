@@ -1,11 +1,11 @@
 {
-  "name": "Grinderouz223",
+  "name": "Grinderouz",
   "short_name": "Grinderouz",
   "description": "The official web app for the Grinderouz223 Clash of Clans clan.",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#111111",
-  "theme_color": "#111111",
+  "background_color": "#020617",
+  "theme_color": "#020617",
   "orientation": "portrait",
   "icons": [
     {
