@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <nav class="coc-nav-theme fixed w-full z-50 px-6 py-3 flex justify-between items-center">
             <div class="flex items-center gap-3 relative z-[60]">
-                <img style="width:36px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));" src="assets/favicon.png" onerror="this.src='https://raw.githubusercontent.com/Supercell/clash-of-clans-assets/master/icons/favicon.png'">
+                <img style="width:36px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));" src="assets/navicon.png" onerror="this.src='https://raw.githubusercontent.com/Supercell/clash-of-clans-assets/master/icons/favicon.png'">
                 <a href="index.html"><span class="text-2xl md:text-3xl font-black tracking-tighter text-white uppercase coc-text-shadow">Grinderouz223</span></a>
             </div>
             
