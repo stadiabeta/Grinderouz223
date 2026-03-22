@@ -115,7 +115,7 @@
             <p class="timestamp">3/22/26</p>
         </div>
         <button class="update-trigger-btn" id="updateBtn" title="Site Info">
-            <img src="assets/favicon.png" alt="!">
+            <img src="assets/navicon.png" alt="!">
         </button>
     `;
 
