@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navbarHTML = `
         <style>
-            /* Clash of Clans Theme Styles */
             .coc-nav-theme {
                 background: linear-gradient(to bottom, #1e293b, #020617);
                 border-bottom: 3px solid #f3c31b;
@@ -73,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 border-color: transparent transparent #334155 transparent;
             }
 
-            /* Invisible bridge to prevent hover gap issues */
             .dropdown-menu::after {
                 content: '';
                 position: absolute;
@@ -128,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .menu-open .hamburger-line:nth-child(1) {
                 top: 8px;
                 transform: rotate(135deg);
-                background: #ef4444; /* Turns red when open to act as close button */
+                background: #ef4444;
             }
             .menu-open .hamburger-line:nth-child(2) {
                 opacity: 0;
@@ -224,18 +222,57 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     const footerHTML = `
-        <footer class="bg-[#020617] border-t-4 border-slate-800 py-12 px-6 text-center">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex items-center justify-center gap-3 mb-6">
-                    <img style="width:36px; filter: grayscale(100%) opacity(0.5);" src="assets/favicon.png" onerror="this.style.display='none'">
-                    <span class="font-black tracking-widest text-slate-500 uppercase text-xl">Grinderouz223</span>
+        <footer class="relative bg-[#020617] border-t-[3px] border-[#f3c31b] pt-12 md:pt-16 pb-6 md:pb-8 px-5 md:px-6 mt-10 md:mt-12 overflow-hidden shadow-[0_-5px_15px_rgba(0,0,0,0.5)]">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-overlay pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto relative z-10">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 mb-10 md:mb-12">
+                    
+                    <div class="flex flex-col items-center sm:col-span-2 lg:col-span-1 md:items-start text-center md:text-left">
+                        <div class="flex items-center gap-3 mb-4">
+                            <img style="width:44px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.8));" src="assets/navicon.png" onerror="this.src='https://raw.githubusercontent.com/Supercell/clash-of-clans-assets/master/icons/favicon.png'">
+                            <span class="font-black tracking-widest text-white uppercase text-2xl coc-text-shadow">Grinderouz</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center md:items-start">
+                        <h3 class="text-[#f3c31b] font-black uppercase tracking-widest text-sm mb-4 md:mb-5 coc-text-shadow">The Clan</h3>
+                        <div class="flex flex-col gap-3">
+                            <a href="#home" class="text-slate-300 hover:text-white hover:translate-x-1 transition-transform font-bold text-sm uppercase flex items-center gap-2"><span class="text-yellow-600">▪</span> Home</a>
+                            <a href="#leadership" class="text-slate-300 hover:text-white hover:translate-x-1 transition-transform font-bold text-sm uppercase flex items-center gap-2"><span class="text-yellow-600">▪</span> Leadership</a>
+                            <a href="#rules" class="text-slate-300 hover:text-white hover:translate-x-1 transition-transform font-bold text-sm uppercase flex items-center gap-2"><span class="text-yellow-600">▪</span> Clan Rules</a>
+                            <a href="#stats" class="text-slate-300 hover:text-white hover:translate-x-1 transition-transform font-bold text-sm uppercase flex items-center gap-2"><span class="text-yellow-600">▪</span> Clan Stats</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center md:items-start">
+                        <h3 class="text-[#f3c31b] font-black uppercase tracking-widest text-sm mb-4 md:mb-5 coc-text-shadow">Official Links</h3>
+                        <div class="flex flex-col gap-3">
+                            <a href="https://store.supercell.com/clashofclans" target="_blank" class="text-slate-300 hover:text-white hover:translate-x-1 transition-transform font-bold text-sm uppercase flex items-center gap-2"><span class="text-yellow-600">▪</span> Supercell Store</a>
+                            <a href="https://supercell.com/en/games/clashofclans/" target="_blank" class="text-slate-300 hover:text-white hover:translate-x-1 transition-transform font-bold text-sm uppercase flex items-center gap-2"><span class="text-yellow-600">▪</span> Clash Of Clans</a>
+                            <a href="https://id.supercell.com/en/clashofclans/" target="_blank" class="text-slate-300 hover:text-white hover:translate-x-1 transition-transform font-bold text-sm uppercase flex items-center gap-2"><span class="text-yellow-600">▪</span> Supercell ID</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center sm:col-span-2 lg:col-span-1 md:items-start">
+                        <h3 class="text-[#f3c31b] font-black uppercase tracking-widest text-sm mb-4 md:mb-5 coc-text-shadow">Community</h3>
+                        <p class="text-slate-400 text-sm font-semibold mb-5 text-center md:text-left max-w-sm md:max-w-none">
+                            Join our Discord server for war plans, base links, announcements, and chat.
+                        </p>
+                        <a href="https://discord.gg/jEN9NNdA4v" target="_blank" class="coc-btn-blue px-6 py-3 rounded-lg text-sm tracking-wider font-bold w-full sm:w-auto md:w-full lg:w-auto flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z"/></svg>
+                            Join Discord
+                        </a>
+                    </div>
                 </div>
-                <p class="text-slate-600 text-sm font-semibold mb-6">© 2026 Grinderouz223 Clan. Not affiliated with Supercell.</p>
-                <div class="mt-4 flex flex-wrap justify-center gap-x-8 gap-y-4">
-                    <a href="https://store.supercell.com/clashofclans" class="text-slate-400 hover:text-yellow-500 font-bold uppercase text-xs tracking-wider transition">Supercell Store</a>
-                    <a href="https://supercell.com/en/games/clashofclans/" class="text-slate-400 hover:text-yellow-500 font-bold uppercase text-xs tracking-wider transition">Clash Of Clans</a>
-                    <a href="https://id.supercell.com/en/clashofclans/" class="text-slate-400 hover:text-yellow-500 font-bold uppercase text-xs tracking-wider transition">SCID</a>
-                    <a href="https://discord.gg/jEN9NNdA4v" class="text-slate-400 hover:text-[#5865F2] font-bold uppercase text-xs tracking-wider transition">Discord</a>
+
+                <div class="pt-6 md:pt-8 border-t border-slate-800/80 flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-6">
+                    <p class="text-slate-500 text-xs font-semibold tracking-wider text-center lg:text-left">
+                        © 2026 GRINDEROUZ223 CLAN. ALL RIGHTS RESERVED.
+                    </p>
+                    <p class="text-slate-600 text-[11px] md:text-xs font-semibold text-center lg:text-right max-w-2xl leading-relaxed">
+                        This content is not affiliated with, endorsed, sponsored, or specifically approved by Supercell and Supercell is not responsible for it. For more information see Supercell's Fan Content Policy: <a href="https://supercell.com/en/fan-content-policy/" target="_blank" class="text-slate-400 hover:text-white transition-colors underline">www.supercell.com/fan-content-policy</a>.
+                    </p>
                 </div>
             </div>
         </footer>

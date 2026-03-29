@@ -110,7 +110,6 @@
 
     container.innerHTML = `
         <div class="update-info-panel" id="updatePanel">
-            <h4>Data Information</h4>
             <p>Last updated:</p>
             <p class="timestamp">3/29/26</p>
         </div>

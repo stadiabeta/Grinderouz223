@@ -11,6 +11,13 @@ const EmojiSystem = (() => {
         "dark-elixir": "assets/emojis/dark-elixir.png",
         "gem": "assets/emojis/gem.png",
         "warleag": "assets/emojis/war-league.png",
+        "discord": "assets/emojis/discord.png",
+        "activity": "assets/emojis/activity.png",
+        "community": "assets/emojis/community.png",
+        "leader": "assets/emojis/leader.png",
+        "xp": "assets/emojis/xp.png",
+        "rules": "assets/emojis/rules.png",
+        "link": "assets/emojis/link.png",
     };
 
     const DEFAULT_SIZE = "1.375rem";
